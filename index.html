@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--BOOTSTRAP-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!--JAVASCRIPT-->
+    <script src = "script.js"></script>
+    <!--HANDLEBARS LIBRARY-->
+    <script src = "https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <title>QUIZ</title>
+</head>
+<body>
+
+  <div id = "app_widget" class = "widget_app"> 
+  </div>
+
+<!-- MAIN VIEW  -->
+<script id = "post_view1" type = "text/x-handlebars-template">
+<h1>Welcome to this quiz about java</h1>
+<div id = name>
+<form>
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" placeholder="First Name">{{this.firstName}}</span>
+      </div>
+      <input type="text" class="form-control">
+    </div>
+  </form>
+
+  <form>
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" placeholder="Last Name">{{this.lastName}}</span>
+      </div>
+      <input type="text" class="form-control">
+    </div>
+    <div class="btn-group-vertical" id = "quiz_choice_buttons">
+        <button type="button" class="btn btn-primary" data-vote = "python">Python Quiz</button>
+        <button type="button" class="btn btn-dark" data-vote= "java">Java Quiz</button>
+    </div>
+
+  </form>
+</div>
+</script>
+
+
+<!-- QUIZ VIEW -->
+<script id = "quiz_view" type = "text/x-handlebars-template">
+    <div class="btn-group-vertical">
+      <!-- Multiple Choice-->
+        <label>{{this.PymultipleChoice.[0].question}} </label>
+            <button type="button" class="btn btn-primary" class = "choice1" data-number = 1>{{this.PymultipleChoice.0.choice1}}</button>
+            <button type="button" class="btn btn-primary" class = "choice" data-number = 2>{{this.PymultipleChoice.0.choice2}}</button>
+            <button type="button" class="btn btn-primary" class = "choice" data-number = 3>{{this.PymultipleChoice.0.choice3}}</button>
+            <button type="button" class="btn btn-primary" class = "choice" data-number = 4>{{this.PymultipleChoice.0.choice4}}</button>
+
+        <label>{{this.PymultipleChoice.1.question}}</label>
+            <button type="button" class="btn btn-primary" data-number = 1>{{this.PymultipleChoice.1.choice1}}</button>
+            <button type="button" class="btn btn-primary" data-number = 1>{{this.PymultipleChoice.1.choice2}}</button>
+            <button type="button" class="btn btn-primary" data-number = 1>{{this.PymultipleChoice.1.choice3}}</button>
+            <button type="button" class="btn btn-primary" data-number = 1>{{this.PymultipleChoice.1.choice4}}</button>   
+
+        <label>{{this.PymultipleChoice.2.question}}</label>
+            <button type="button" class="btn btn-primary">{{this.PymultipleChoice.2.choice1}}</button>
+            <button type="button" class="btn btn-primary">{{this.PymultipleChoice.2.choice2}}</button>
+            <button type="button" class="btn btn-primary">{{this.PymultipleChoice.2.choice3}}</button>
+            <button type="button" class="btn btn-primary">{{this.PymultipleChoice.2.choice4}}</button> 
+
+        <label>{{this.PymultipleChoice.3.question}}</label>
+            <button type="button" class="btn btn-primary">{{this.PymultipleChoice.3.choice1}}</button>
+            <button type="button" class="btn btn-primary">{{this.PymultipleChoice.3.choice2}}</button>
+            <button type="button" class="btn btn-primary">{{this.PymultipleChoice.3.choice3}}</button>
+            <button type="button" class="btn btn-primary">{{this.PymultipleChoice.3.choice4}}</button>
+
+        <label>{{this.PymultipleChoice.4.question}}</label>
+            <button type="button" class="btn btn-primary">{{this.PymultipleChoice.4.choice1}}</button>
+            <button type="button" class="btn btn-primary">{{this.PymultipleChoice.4.choice2}}</button>
+            <button type="button" class="btn btn-primary">{{this.PymultipleChoice.4.choice3}}</button>
+            <button type="button" class="btn btn-primary">{{this.PymultipleChoice.4.choice4}}</button>   
+<!--Fill in the blank-->
+        <label>{{this.PyfillInBlank.0.question}}</label>
+            <button type="button" class="btn btn-primary">{{this.PyfillInBlank.0.choice1}}</button>
+            <button type="button" class="btn btn-primary">{{this.PyfillInBlank.0.choice2}}</button>
+            <button type="button" class="btn btn-primary">{{this.PyfillInBlank.0.choice3}}</button>
+            <button type="button" class="btn btn-primary">{{this.PyfillInBlank.0.choice4}}</button> 
+
+          <label>{{this.PyfillInBlank.1.question}}</label>
+            <button type="button" class="btn btn-primary">{{this.PyfillInBlank.1.choice1}}</button>
+            <button type="button" class="btn btn-primary">{{this.PyfillInBlank.1.choice2}}</button>
+            <button type="button" class="btn btn-primary">{{this.PyfillInBlank.1.choice3}}</button>
+            <button type="button" class="btn btn-primary">{{this.PyfillInBlank.1.choice4}}</button> 
+
+          <label>{{this.PyfillInBlank.2.question}}</label>
+            <button type="button" class="btn btn-primary">{{this.PyfillInBlank.2.choice1}}</button>
+            <button type="button" class="btn btn-primary">{{this.PyfillInBlank.2.choice2}}</button>
+            <button type="button" class="btn btn-primary">{{this.PyfillInBlank.2.choice3}}</button>
+            <button type="button" class="btn btn-primary">{{this.PyfillInBlank.2.choice4}}</button> 
+
+          <label>{{this.PyfillInBlank.3.question}}</label>
+            <button type="button" class="btn btn-primary">{{this.PyfillInBlank.3.choice1}}</button>
+            <button type="button" class="btn btn-primary">{{this.PyfillInBlank.3.choice2}}</button>
+            <button type="button" class="btn btn-primary">{{this.PyfillInBlank.3.choice3}}</button>
+            <button type="button" class="btn btn-primary">{{this.PyfillInBlank.3.choice4}}</button> 
+
+          <label>{{this.PyfillInBlank.4.question}}</label>
+            <button type="button" class="btn btn-primary">{{this.PyfillInBlank.4.choice1}}</button>
+            <button type="button" class="btn btn-primary">{{this.PyfillInBlank.4.choice2}}</button>
+            <button type="button" class="btn btn-primary">{{this.PyfillInBlank.4.choice3}}</button>
+            <button type="button" class="btn btn-primary">{{this.PyfillInBlank.4.choice4}}</button> 
+<!--True or False-->
+            <label>{{this.PyTruenFalse.0.question}}</label>
+            <button type="button" class="btn btn-primary">{{this.PyTruenFalse.0.choice1}}</button>
+            <button type="button" class="btn btn-primary">{{this.PyTruenFalse.0.choice2}}</button>
+
+            <label>{{this.PyTruenFalse.1.question}}</label>
+            <button type="button" class="btn btn-primary">{{this.PyTruenFalse.1.choice1}}</button>
+            <button type="button" class="btn btn-primary">{{this.PyTruenFalse.1.choice2}}</button>
+
+            <label>{{this.PyTruenFalse.2.question}}</label>
+            <button type="button" class="btn btn-primary">{{this.PyTruenFalse.2.choice1}}</button>
+            <button type="button" class="btn btn-primary">{{this.PyTruenFalse.2.choice2}}</button>
+
+            <label>{{this.PyTruenFalse.3.question}}</label>
+            <button type="button" class="btn btn-primary">{{this.PyTruenFalse.3.choice1}}</button>
+            <button type="button" class="btn btn-primary">{{this.PyTruenFalse.3.choice2}}</button>
+
+            <label>{{this.PyTruenFalse.4.question}}</label>
+            <button type="button" class="btn btn-primary">{{this.PyTruenFalse.4.choice1}}</button>
+            <button type="button" class="btn btn-primary">{{this.PyTruenFalse.4.choice2}}</button>
+    <!--Short Answer-->
+    <label>{{this.PyShort-Answer.0.question}} </label>
+    <button type="button" class="btn btn-primary" class = "choice" data-number = 1>{{this.PyShort-Answer.0.choice1}}</button>
+    <button type="button" class="btn btn-primary" class = "choice" data-number = 2>{{this.PyShort-Answer.0.choice2}}</button>
+    <button type="button" class="btn btn-primary" class = "choice" data-number = 3>{{this.PyShort-Answer.0.choice3}}</button>
+    <button type="button" class="btn btn-primary" class = "choice" data-number = 4>{{this.PyShort-Answer.0.choice4}}</button>
+
+    <label>{{this.PyShort-Answer.1.question}} </label>
+    <button type="button" class="btn btn-primary" class = "choice" data-number = 1>{{this.PyShort-Answer.1.choice1}}</button>
+    <button type="button" class="btn btn-primary" class = "choice" data-number = 2>{{this.PyShort-Answer.1.choice2}}</button>
+    <button type="button" class="btn btn-primary" class = "choice" data-number = 3>{{this.PyShort-Answer.1.choice3}}</button>
+    <button type="button" class="btn btn-primary" class = "choice" data-number = 4>{{this.PyShort-Answer.1.choice4}}</button>
+
+    <label>{{this.PyShort-Answer.2.question}} </label>
+    <button type="button" class="btn btn-primary" class = "choice" data-number = 1>{{this.PyShort-Answer.2.choice1}}</button>
+    <button type="button" class="btn btn-primary" class = "choice" data-number = 2>{{this.PyShort-Answer.2.choice2}}</button>
+    <button type="button" class="btn btn-primary" class = "choice" data-number = 3>{{this.PyShort-Answer.2.choice3}}</button>
+    <button type="button" class="btn btn-primary" class = "choice" data-number = 4>{{this.PyShort-Answer.2.choice4}}</button>
+
+    <label>{{this.PyShort-Answer.3.question}} </label>
+    <button type="button" class="btn btn-primary" class = "choice" data-number = 1>{{this.PyShort-Answer.3.choice1}}</button>
+    <button type="button" class="btn btn-primary" class = "choice" data-number = 2>{{this.PyShort-Answer.3.choice2}}</button>
+    <button type="button" class="btn btn-primary" class = "choice" data-number = 3>{{this.PyShort-Answer.3.choice3}}</button>
+    <button type="button" class="btn btn-primary" class = "choice" data-number = 4>{{this.PyShort-Answer.3.choice4}}</button>
+
+    <label>{{this.PyShort-Answer.4.question}} </label>
+    <button type="button" class="btn btn-primary" class = "choice" data-number = 1>{{this.PyShort-Answer.4.choice1}}</button>
+    <button type="button" class="btn btn-primary" class = "choice" data-number = 2>{{this.PyShort-Answer.4.choice2}}</button>
+    <button type="button" class="btn btn-primary" class = "choice" data-number = 3>{{this.PyShort-Answer.4.choice3}}</button>
+    <button type="button" class="btn btn-primary" class = "choice" data-number = 4>{{this.PyShort-Answer.4.choice4}}</button>
+    </div>
+</script>
+
+<!--
+<script id = "quiz_view2" type = "text/x-handlebars-template">
+  <div class = "btn-group-vertical">
+    <label>{{this.PymultipleChoice.1.question}}</label>
+            <button type="button" class="btn btn-primary">{{this.PymultipleChoice.1.choice1}}</button>
+            <button type="button" class="btn btn-primary">{{this.PymultipleChoice.1.choice2}}</button>
+            <button type="button" class="btn btn-primary">{{this.PymultipleChoice.1.choice3}}</button>
+            <button type="button" class="btn btn-primary">{{this.PymultipleChoice.1.choice4}}</button> 
+  </div>
+</div>
+</script>
+-->
+
+
+<!-- FeedBack VIEW-->
+<script id = "feedback_view" type = "text/x-handlebars-template">
+
+</script>
+
+
+</body>
+
+</html>
+
+<!--
+<script id = "view2" type = "text/x-handlebars-template">
+    <h1>Questions 1</h1>
+    <p>When was Java created?</p>
+    <div class="btn-group-vertical">
+        <button type="button" class="btn btn-primary">Apple</button>
+        <button type="button" class="btn btn-dark">Samsung</button>
+        <button type="button" class="btn btn-success">Sony</button>
+        <button type="button" class="btn btn-danger">Sony</button>
+      </div>
+</script>
+-->

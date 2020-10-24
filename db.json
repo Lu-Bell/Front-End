@@ -1,0 +1,186 @@
+{
+    "PymultipleChoice" :[
+        {
+        "type" : "multiple-choice",
+        "question" : "What do you use to create a function in Python?",
+        "choice1" : "func",
+        "choice2" : "function",
+        "choice3" : "def",
+        "choice4" : "void",
+        "answer": 3
+         
+        },
+        {
+         "type" : "multiple-choice",
+        "question" : "What is the term for creating a list in python?",
+        "choice1" : "list",
+        "choice2" : "array",
+        "choice3" : "def",
+        "choice4" : "function",
+        "answer": 2
+        }, 
+        {
+            "type" : "multiple-choice",
+           "question" : "Who created python?",
+           "choice1" : "Guido Van Rossum",
+           "choice2" : "LeBron James",
+           "choice3" : "Bill Gates",
+           "choice4" : "Steve Harvey",
+           "answer": 1
+        }, 
+        {
+        "type" : "multiple-choice",
+        "question" : "How do you print something in Python?",
+        "choice1" : "print('Hello World')",
+        "choice2" : "p('Hello World')",
+        "choice3" : "def('Hello World')",
+        "choice4" : "func('Hello World')",
+        "answer": 1
+        }, 
+        {
+        "type" : "multiple-choice",
+        "question" : "Python is named after a...",
+        "choice1" : "British Comedy Group",
+        "choice2" : "Movie",
+        "choice3" : "Snake",
+        "choice4" : "Rat",
+        "answer": 1 
+        }
+    ],
+
+    "PyfillInBlank": [
+        {
+        "type" : "fill-in-blank",
+        "question" : "A _____ is used to store values in python",
+        "choice1" : "print('Hello World')",
+        "choice2" : "def",
+        "choice3" : "value",
+        "choice4" : "array",
+        "answer": 3 
+        
+    },
+    {
+        "type" : "fill-in-blank",
+        "question" : "A ______ is used to store blocks of code",
+        "choice1" : "print('Hello World')",
+        "choice2" : "function",
+        "choice3" : "lunch box",
+        "choice4" : "def", 
+        "answer": 2
+        
+    },
+
+    {
+        "type" : "fill-in-blank",
+        "question" : "_____ is a programming language",
+        "choice1" : "python",
+        "choice2" : "cobra",
+        "choice3" : "spider-man",
+        "choice4" : "Michael Jordan",
+        "answer": 1
+        
+    },
+    {
+        "type" : "fill-in-blank",
+        "question" : "A ______ hold true or false value",
+        "choice1" : "int",
+        "choice2" : "string",
+        "choice3" : "boolean",
+        "choice4" : "double",
+        "answer": 3
+            
+    },
+    {
+        "type" : "fill-in-blank",
+        "question" : "A ______ is what is used to comment out code",
+        "choice1" : "//",
+        "choice2" : "<!-- -->",
+        "choice3" : "$",
+        "choice4" : "#",
+        "answer": 4
+    }
+],
+"PyTruenFalse" :
+[
+    {
+        "type": "true-false",
+        "question": "Python is a general purpose language",
+        "choice1": "true",
+        "choice2": "false",
+        "answer": 1
+
+    },
+    {
+        "type": "true-false",
+        "question": "Python is a strongly type language",
+        "choice1": "true",
+        "choice2": "false",
+        "answer": 2
+    },
+    {
+        "type": "true-false",
+        "question": "Python is a strongly type language",
+        "choice1": "true",
+        "choice2": "false",
+        "answer": 2
+    },
+    {
+        "type": "true-false",
+        "question": "Python is a great language",
+        "choice1": "true",
+        "choice2": "false",
+        "answer": 1
+    },
+    {
+        "type": "true-false",
+        "question": "0 is the first number in the index",
+        "choice1": "true",
+        "choice2": "false",
+        "answer": 2
+    }
+],
+"PyShort-Answer":
+[
+    {
+        "type": "short-answer",
+        "question": "Python files end with ____",
+        "choice1": "py",
+        "choice2": "java",
+        "choice3": "json",
+        "answer": 1
+    },
+    {
+        "type": "short-answer",
+        "question": "a ____ loop, loops through an array",
+        "choice1": "for",
+        "choice2": "if",
+        "choice3": "json",
+        "answer": 1
+    },
+    {
+        "type": "short-answer",
+        "question": "Central Processing Unit abbreviated is (_____)",
+        "choice1": "JAV",
+        "choice2": "WIFI",
+        "choice3": "CPU",
+        "answer": 3
+    },
+    {
+        "type": "short-answer",
+        "question": "Big ____ Notation",
+        "choice1": "S",
+        "choice2": "O",
+        "choice3": "J",
+        "answer": 2
+    },
+    {
+        "type": "short-answer",
+        "question": "You use a ____ drive to store extra data",
+        "choice1": "USB",
+        "choice2": "JSON",
+        "choice3": "PY",
+        "answer": 1
+    }
+]
+}
+
